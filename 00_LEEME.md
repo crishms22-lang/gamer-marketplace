@@ -1,8 +1,8 @@
-# Gamer Marketplace — Reglamentos v0.4
+# Gamer Marketplace — Reglamentos v0.5
 
 **Estado: BORRADOR actualizado para revisión del propietario. No publicar como reglamento oficial todavía.**
 
-Esta versión incorpora las reglas confirmadas más recientes y las dos tablas de economía. Separa lo decidido de lo que aún falta definir. No contiene código ni activa cobros o retiros.
+Esta versión incorpora las reglas confirmadas más recientes, las dos tablas de economía y la aclaración definitiva de cancelaciones. Separa lo decidido de lo que aún falta definir. No contiene código ni activa cobros o retiros.
 
 ## Decisiones confirmadas
 - Edad mínima: 18 años.
@@ -18,7 +18,7 @@ Esta versión incorpora las reglas confirmadas más recientes y las dos tablas d
 - Ajustes manuales de coins por administración requieren motivo y registro de auditoría.
 - Las reseñas entre cliente y prestador solo se habilitan después de una contratación real y validada.
 - El menú de tres líneas incluye disputas, apelaciones, cancelaciones, reembolsos y solicitudes para ser prestador o staff.
-- La cancelación tiene una ventana de al menos 5 minutos antes de la entrada con el prestador; sigue pendiente aclarar cómo convive con la regla de 3 minutos sin comisión.
+- La cancelación es gratuita solo durante los primeros 3 minutos. La espera de 5 minutos antes de entrar con el prestador es una regla separada y no extiende la ventana gratuita.
 
 ## Etiquetas
 **CONFIRMADO** = decisión indicada por el propietario. **PENDIENTE** = aún requiere decisión. Los temas legales, fiscales y de pagos requieren revisión profesional en México.

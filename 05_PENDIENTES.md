@@ -12,7 +12,7 @@ Este registro distingue decisiones confirmadas de asuntos todavía abiertos. No 
 7. Apelaciones con objetivo de 1 hora a 3 días hábiles, sin importar el día de presentación; revisa una autoridad superior no implicada.
 8. El baneo no elimina el historial necesario de contrataciones y decisiones.
 9. Cancelación: primeros 3 minutos antes del inicio sin comisión; después y antes del inicio 10%; una vez iniciado 60%, apelable. Base: precio del servicio, excluyendo cargos adicionales.
-10. Hay una ventana de al menos 5 minutos antes de entrar con el prestador para reconsiderar/cancelar.
+10. Hay una espera/ventana de al menos 5 minutos antes de entrar con el prestador; es independiente de los 3 minutos gratuitos de cancelación.
 11. Clientes y prestadores pueden calificarse mutuamente solo después de una contratación real validada.
 12. Solo prestadores aprobados pueden ver y solicitar retiros de ganancias elegibles; clientes no ven esas opciones.
 13. Los Coins comprados no son retirables; prestadores no pueden comprarlos; UI y backend/API deben bloquear la compra.
@@ -24,8 +24,8 @@ Este registro distingue decisiones confirmadas de asuntos todavía abiertos. No 
 19. Menú de tres líneas con disputas, apelaciones, cancelaciones, reembolsos y solicitudes de prestadores/staff.
 
 ## B. Pendientes operativos y de producto
-1. **Cancelación (bloqueante):** definir cómo conviven los 5 minutos previos a entrar con la regla de 3 minutos sin comisión. ¿Los 5 minutos son todos sin comisión o la regla de 3 minutos corre dentro de ellos?
-2. Definir qué evento inicia el reloj de cancelación, qué prueba que el servicio comenzó, quién recibe la comisión y reglas por desconexión, fuerza mayor, fallo de plataforma, culpa del prestador y contracargos.
+1. **Cancelación — aclaración confirmada:** solo los primeros 3 minutos son gratuitos. La espera de al menos 5 minutos antes de entrar con el prestador es independiente y no amplía la ventana gratuita.
+2. Definir qué evento exacto inicia el reloj de cancelación y qué prueba que el servicio comenzó; además, quién recibe la comisión y las reglas por desconexión, fuerza mayor, fallo de plataforma, culpa del prestador y contracargos.
 3. Definir si “un mes” del contador es mes calendario o fecha a fecha.
 4. Definir el alcance completo de suspensión, más allá de contratar, comentar y calificar.
 5. Definir horario/zona horaria hábil, inicio/pausas del reloj de apelación y plazo para presentarla.
