@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101225">
+  <meta name="description" content="Gamer Marketplace: encuentra y ofrece servicios para videojuegos.">
+  <title>Gamer Marketplace</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-nav="home" aria-label="Gamer Marketplace inicio"><span class="brand-mark">G</span><span>Gamer<span class="accent">Market</span></span></a>
+    <nav class="desktop-nav" aria-label="Principal">
+      <button data-nav="home">Inicio</button><button data-nav="explore">Explorar</button><button data-nav="contracts">Contratos</button><button data-nav="coins">Coins</button>
+    </nav>
+    <div class="top-actions"><span id="user-pill" class="user-pill">Invitado</span><button id="login-open" class="btn btn-outline">Entrar</button><button id="logout" class="btn btn-outline hidden">Salir</button></div>
+  </header>
+
+  <main>
+    <div id="demo-banner" class="notice"><strong>Modo de prueba:</strong> las Coins no tienen valor monetario. No hay depósitos ni retiros reales.</div>
+    <section id="view-home" class="view hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TU HABILIDAD. TU COMUNIDAD.</p>
+        <h1>Juega mejor.<br><span class="gradient-text">Crece como gamer.</span></h1>
+        <p class="hero-sub">Encuentra servicios para tus juegos favoritos o publica lo que sabes hacer. Los pagos de prueba quedan retenidos hasta completar el contrato.</p>
+        <div class="hero-actions"><button class="btn btn-primary" data-nav="explore">Explorar servicios <span aria-hidden="true">→</span></button><button class="btn btn-outline" data-action="publish">Publicar un servicio</button></div>
+        <div class="hero-stats"><div><strong>4</strong><span>juegos iniciales</span></div><div><strong>30%</strong><span>comisión transparente</span></div><div><strong>18+</strong><span>edad mínima</span></div></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="game-card"><span class="game-card-icon">⌁</span><span class="game-card-label">PLAYER ONE</span><strong>Tu próxima<br>victoria empieza aquí</strong><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div><div class="floating-chip chip-a">✦ Coins</div><div class="floating-chip chip-b">GG!</div></div>
+    </section>
+
+    <section id="view-explore" class="view hidden">
+      <div class="section-head"><div><p class="eyebrow">DESCUBRE TU SIGUIENTE NIVEL</p><h2>Explorar servicios</h2><p>Los servicios aparecen aquí solo después de la revisión manual.</p></div><button class="btn btn-primary" data-action="publish">+ Publicar servicio</button></div>
+      <div class="filters"><input id="search-q" placeholder="Buscar un servicio..." aria-label="Buscar"><select id="game-filter" aria-label="Filtrar por juego"><option value="">Todos los juegos</option><option>Minecraft</option><option>Fortnite</option><option>Warzone</option><option>Free Fire</option></select><button class="btn btn-outline" id="search-btn">Buscar</button></div>
+      <div id="listing-grid" class="listing-grid"><div class="empty-state">Cargando servicios…</div></div>
+    </section>
+
+    <section id="view-publish" class="view hidden">
+      <div class="section-head"><div><p class="eyebrow">COMPARTE LO QUE SABES HACER</p><h2>Publicar servicio</h2><p>Tu publicación debe aprobarse antes de hacerse pública.</p></div></div>
+      <form id="publish-form" class="panel form-grid">
+        <label>Juego<select name="game" required><option value="">Selecciona</option><option>Minecraft</option><option>Fortnite</option><option>Warzone</option><option>Free Fire</option></select></label>
+        <label>Título<input name="title" minlength="5" maxlength="120" required placeholder="Ej. Construcción de una base medieval"></label>
+        <label class="span-2">Descripción<textarea name="description" minlength="20" maxlength="3000" required placeholder="Explica exactamente qué ofreces."></textarea></label>
+        <label>Nivel autodeclarado (1–10)<select name="skillLevel" required><option value="">Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select><small>No es una certificación verificada.</small></label>
+        <label>Precio en Coins<input name="priceCoins" type="number" min="1" max="1000000000" required></label>
+        <label>Plazo de entrega (horas)<input name="deadlineHours" type="number" min="1" max="2160" required></label>
+        <label>Entregables<textarea name="deliverables" minlength="5" maxlength="1500" required placeholder="Qué recibirá exactamente el cliente"></textarea></label>
+        <label class="span-2">Condiciones<textarea name="conditions" minlength="2" maxlength="1500" required placeholder="Requisitos, límites y condiciones"></textarea></label>
+        <div class="span-2"><button class="btn btn-primary" type="submit">Enviar a revisión</button></div>
+      </form>
+    </section>
+
+    <section id="view-coins" class="view hidden">
+      <div class="section-head"><div><p class="eyebrow">TU SALDO DE PRUEBA</p><h2>Coins</h2><p>Esta versión no procesa pagos reales ni permite retirar dinero.</p></div></div>
+      <div id="wallet-summary" class="wallet-summary"><div class="panel">Inicia sesión para consultar tu saldo.</div></div>
+      <div class="panel"><h3>Historial de movimientos</h3><div id="ledger-list" class="table-list">Inicia sesión para ver tus movimientos.</div></div>
+    </section>
+
+    <section id="view-contracts" class="view hidden">
+      <div class="section-head"><div><p class="eyebrow">ACUERDOS ENTRE JUGADORES</p><h2>Mis contratos</h2><p>El proveedor recibe sus Coins cuando el cliente confirma la entrega o una disputa se resuelve.</p></div></div>
+      <div id="contract-list" class="contract-list"><div class="empty-state">Inicia sesión para ver tus contratos.</div></div>
+    </section>
+
+    <section id="view-profile" class="view hidden">
+      <div class="section-head"><div><p class="eyebrow">TU CUENTA</p><h2>Perfil</h2></div></div>
+      <div id="profile-card" class="panel">Inicia sesión para ver tu perfil.</div>
+      <div id="admin-area" class="hidden">
+        <div class="section-head"><div><p class="eyebrow">CONTROL INTERNO</p><h2>Administración</h2><p>Acciones sensibles se registran para auditoría.</p></div></div>
+        <div id="admin-overview" class="admin-stats"></div>
+        <div class="panel"><h3>Publicaciones pendientes</h3><div id="admin-listings" class="table-list">Cargando…</div></div>
+        <div class="panel"><h3>Crédito manual de Coins de prueba</h3><p class="muted">Solo para pruebas. En producción, verifica el pago real antes de acreditar. No uses dinero real con este MVP.</p>
+          <form id="credit-form" class="form-grid">
+            <label>ID de usuario<input name="userId" type="number" min="1" required></label>
+            <label>Cantidad de Coins<input name="amount" type="number" min="1" required></label>
+            <label>Referencia única<input name="reference" required maxlength="120"></label>
+            <label>Clave de idempotencia<input name="idempotencyKey" required minlength="8" maxlength="160"></label>
+            <label class="span-2">Motivo<input name="reason" required minlength="5" maxlength="500"></label>
+            <div class="span-2"><button class="btn btn-primary" type="submit">Acreditar Coins de prueba</button></div>
+          </form>
+        </div>
+        <div class="panel"><h3>Resolver disputa</h3><div id="admin-disputes" class="table-list">Cargando…</div></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Navegación móvil">
+    <button data-nav="home"><span>⌂</span>Inicio</button><button data-nav="explore"><span>⌕</span>Explorar</button><button data-nav="contracts"><span>▣</span>Contratos</button><button data-nav="coins"><span>◈</span>Coins</button><button data-nav="profile"><span>◉</span>Perfil</button>
+  </nav>
+
+  <dialog id="auth-dialog" class="modal">
+    <form method="dialog" class="modal-close"><button aria-label="Cerrar">×</button></form>
+    <div class="modal-content">
+      <p class="eyebrow">BIENVENIDO A LA PARTIDA</p><h2 id="auth-title">Iniciar sesión</h2>
+      <p class="muted">Modo demo: el código se muestra en pantalla. No se envía ningún SMS real.</p>
+      <form id="request-code-form"><label>Teléfono con código de país<input name="phone" required minlength="8" placeholder="+52 55 1234 5678"></label><button class="btn btn-primary full" type="submit">Solicitar código</button></form>
+      <form id="verify-form" class="hidden"><label>Código de 6 dígitos<input name="code" inputmode="numeric" pattern="[0-9]{6}" required></label><button class="btn btn-primary full" type="submit">Verificar y continuar</button></form>
+      <form id="register-form" class="hidden form-grid">
+        <label>Nombre<input name="name" required maxlength="80"></label><label>Edad<input name="age" type="number" min="18" max="120" required></label>
+        <label>País<input name="country" required value="México"></label><label>Estado / provincia<input name="region" required></label>
+        <label>Municipio<input name="municipality" required></label><label>Correo electrónico<input name="email" type="email" required></label>
+        <div class="span-2"><button class="btn btn-primary full" type="submit">Crear cuenta</button></div>
+      </form>
+      <p id="auth-message" class="form-message" role="status"></p><div id="demo-code" class="demo-code hidden"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <footer><span>© Gamer Marketplace</span><span>Versión de prueba · Coins sin valor monetario</span><a href="/privacy.html">Privacidad</a></footer>
+</body>
+</html>
